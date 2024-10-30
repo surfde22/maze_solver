@@ -69,3 +69,7 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
     1. `_break_walls_r(i, j)` function added
     2. Fuction randomly moves from `Cell` to `Cell` to remove random walls and create the `Maze`
     3. Reset `visited` to `False`
+16. Add function, `solve()` to solve the `Maze`
+    1. The new function calls `_solve_r` starting with `Cell` {0, 0}
+    2. `_solve_r` checks if neighboring `Cell` can be visited and hasn't been visited
+    3. If both cases are `True` visit that Cell
