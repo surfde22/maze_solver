@@ -5,7 +5,7 @@ This is a simple program to build and solve a maze using python and Tkinter
 This is part of the boot.dev trainig and is a semi guided project on their site.
 
 - Make sure python3 and Tkiner are installed
-- Connect to your GitHub repository, using git clone <*repository url*>
+- Connect to your GitHub repository, using `git clone <*repository url*>`
 - Created a Window class that pops up a basic window with a white background
 - Created classes for Point and Line
     - Point is a simple point on the Window storing an x- and y-coordinate
