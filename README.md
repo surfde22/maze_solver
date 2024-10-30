@@ -62,3 +62,9 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
 13. ***tests.py*** used to perform unit testing on the `Maze`
     1. Imported `unittest` to ***tests.py***
     2. Created tests to test `Mazes` of different sizes
+14. `Maze` updated to set start `Cell` and end `Cell`
+    1. Created `_break_entrance_and_exit()` function
+    2. Function draws any wall with exists value equal to `False` white
+15. Updating `Maze` to break walls to make complete `Maze`
+    1. `_break_walls_r(i, j)` function added
+    2. Fuction randomly moves from `Cell` to `Cell` to remove random walls and create the `Maze`
