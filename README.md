@@ -6,7 +6,7 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
 
 1. Make sure ***python3*** and ***Tkiner*** are installed
 2. Connect to your GitHub repository, using `git clone <*repository url*>`
-3. Created a `Window` class
+3. Created `Window` class in ***graphics.py***
     1. Constructor takes in width and height
     2. Creates a root widget using `Tk()`
     3. Hardcodes the `title` property for the `Window`
@@ -15,10 +15,10 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
     6. Created a `wait_for_close()` functionthat will redraw the `Window` as long as it is running
     7. Created a `close()` function that tells the `wait_for_close()` function to stop redrawing
 4. Create `main()` function to test and execute `maze_solver`
-5. Created `Point` class
+5. Created `Point` class in ***graphics.py***
     1. `Point` is a simple point on the `Window` storing an x- and y-coordinate
     2. Constructor takes in x-coordinate and y-coordinate of the `Point`
-6. Created `Line` class
+6. Created `Line` class in ***graphics.py***
     1. `Line` is a black line connecting two `Points` with width of 2
     2. Contructor takes in two `Points`
     3. Created `draw()` function to draw a line connection the two points
@@ -26,7 +26,7 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
             1. The `fill_color` defaults to ***black***
         2. Uses the `Canvas.create_line()` function to draw a black line
 7. Tested the `Point` and `Line` classes by adding a few lines to the `Window`
-8. Created new class for `Cell`
+8. Created `Cell` class in ***cell.py***
     1. A maze is just a series of connected `Cells`, with some side existing and others not
     2. Constructor takes the `Window` where it will be drawn
     3. Stores `boolean` value for each side defining if it exists or not, default to `True`
@@ -39,3 +39,24 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
     2. Function draws a `Line` from the center of `self` to center of `to_cell`
     3. `Line` is ***red*** if `undo == False`, otherwise it is ***gray***
 11. Tested `draw_move` by adding samples to `main()`
+12. Created `Maze` class in ***maze.py***
+    1. Constructor takes in following inputs:
+        1. x1 - starting x-coordinate of `Maze` - top side of `Maze`
+        2. y1 - starting y-coordinate of `Maze` - left side of `Maze`
+        3. num_rows - how many rows are in the `Maze`
+        4. num_columns - how many columns are in the `Maze`
+        5. cell_size_x - width of each `Cell`
+        6. cell_size_y - height of each `Cell`
+        7. win - `Window` where `Maze` will be drawn
+    2. `_create_cells()` function:
+        1. Creates a `List` (`self._cells`) of `Cells` for the maze.
+        2. The `List` contains a `List` representing each column of `Cells`
+        3. Calls `_draw_cells(i, j)` on each `Cell` in `self._cells`
+    3. `_draw_cells(i, j)` function:
+        1. Calculates the x/y position of the `Cell` using inputs, `cell_size`, and x/y postion of the `Maze`
+        2. Draw `Cell` at calculate x/y positions
+        3. Call `_animate()` function
+    4. `_animate()` function:
+        1. Call `self._win.redraw()`
+        2. Sleep for short period of time
+
