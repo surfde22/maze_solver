@@ -33,3 +33,9 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
     4. Stores coordinates for two `Points`, top left and bottom right, deafault to `None`
     5. Added `draw()` method that takes in coordinates for the two `Points` used for drawing the `Cell`
 9. Tested `Cell` by adding several `Cells` to `Window` with some sides missing
+10. Added `draw_move()` function to `Cell`
+    1. Function takes in a `to_cell` and `undo` status
+        1. `undo` defaults to `False`
+    2. Function draws a `Line` from the center of `self` to center of `to_cell`
+    3. `Line` is ***red*** if `undo == False`, otherwise it is ***gray***
+11. Tested `draw_move` by adding samples to `main()`
