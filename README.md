@@ -68,3 +68,4 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
 15. Updating `Maze` to break walls to make complete `Maze`
     1. `_break_walls_r(i, j)` function added
     2. Fuction randomly moves from `Cell` to `Cell` to remove random walls and create the `Maze`
+    3. Reset `visited` to `False`
