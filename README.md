@@ -59,4 +59,6 @@ This is part of the [boot.dev](https://boot.dev) trainig and is a semi guided pr
     4. `_animate()` function:
         1. Call `self._win.redraw()`
         2. Sleep for short period of time
-
+13. ***tests.py*** used to perform unit testing on the `Maze`
+    1. Imported `unittest` to ***tests.py***
+    2. Created tests to test `Mazes` of different sizes
